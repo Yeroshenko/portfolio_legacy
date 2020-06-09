@@ -1,0 +1,79 @@
+@import '../breakpoints'
+@import '../varibles'
+
+.intro-overlay
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+.intro-overlay__inner
+  position: relative
+  width: 100%
+  height: 100%
+
+.overlay__top
+  position: absolute
+  top: 0
+  height: 50vh //fallback option
+  height: calc(var(--vh, 1vh) * 50)
+  width: 100%
+  z-index: 8
+
+.overlay__top-item
+  position: absolute
+  bottom: 0
+  height: 100%
+  width: calc( 100vw / 3 )
+  background-color: $black
+
+  +media('<=tablet')
+    width: 100vw
+
+  &:nth-child(2)
+    left: calc( 100% / 3 )
+
+    +media('<=tablet')
+      display: none
+
+  &:nth-child(3)
+    left: calc( 100% / 3 * 2 )
+
+    +media('<=tablet')
+      display: none
+
+.overlay__bottom
+  position: absolute
+  bottom: 0
+  width: 100%
+  height: 50vh //fallback option
+  height: calc(var(--vh, 1vh) * 50)
+  z-index: 8
+
+.overlay__bottom-item
+  position: absolute
+  bottom: 0
+  right: calc( 100% / 3 * 2 )
+  height: 100%
+  width: calc( 100vw / 3 )
+  background-color: $black
+
+  +media('<=tablet')
+    right: 0
+    width: 100vw
+
+  &:nth-child(2)
+    right: calc( 100% / 3 )
+
+    +media('<=tablet')
+      width: 100vw
+      top: 100%
+      right: 0
+
+  &:nth-child(3)
+    right: 0
+
+    +media('<=tablet')
+      width: 100vw
+      top: 200%

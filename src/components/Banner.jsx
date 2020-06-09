@@ -10,10 +10,10 @@ export const Banner = () => {
         <div className='row banner__row'>
           <h2 className='banner__title'>
             <div className='banner__line'>
-              <span>Creating unique brands is</span>
+              <span>Создание топовых сайтов</span>
             </div>
             <div className='banner__line'>
-              <span>what we do.</span>
+              <span>от топ кодера.</span>
             </div>
           </h2>
           <div className='banner__btn'>
