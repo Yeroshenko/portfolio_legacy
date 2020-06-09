@@ -1,0 +1,87 @@
+@import '../varibles'
+@import '../breakpoints'
+
+.banner
+  height: 50vh //fallback option
+  height: calc(var(--vh, 1vh) * 50)
+  background-color: $white
+
+.banner__row
+  flex-direction: column
+  justify-content: center
+
+.banner__title
+  margin: 0.8em 0
+  font-size: 3rem
+  line-height: 4.2rem
+  font-weight: 700
+  z-index: 10
+  color: $white
+  mix-blend-mode: difference
+
+  @include media ('<=tablet')
+    font-size: 2.4rem
+    line-height: 3rem
+
+  @include media ('<=phone')
+    margin-top: 72px
+    font-size: 1.7rem
+    line-height: 2.2rem
+
+.banner__line
+  margin-bottom: 8px
+  height: 57px
+  position: relative
+  overflow: hidden
+
+  @include media ('<=tablet')
+    height: 48px
+
+  @include media ('<=phone')
+    height: 35.2px
+
+  span
+    position: absolute
+
+.banner__btn
+  width: 256px
+  position: relative
+  z-index: 2
+
+.banner__btn-link
+  display: flex
+  align-items: center
+  font-weight: 600
+  font-size: 1.6rem
+  color: $black
+  text-decoration: none
+
+  @include media ('<=tablet')
+    font-size: 1.3rem
+
+  @include media ('<=phone')
+    font-size: 1.1rem
+
+  &:hover
+    .banner__btn-icon
+      background-color: $black
+      color: $white
+
+.banner__btn-icon
+  margin-left: 16px
+  padding: 12px
+  height: 52px
+  width: 52px
+  border: 2px solid $black
+  border-radius: 50%
+  transition: .4s ease-in-out all
+
+  @include media ('<=tablet')
+    padding: 6px
+    width: 20px
+    height: 20px
+
+  @include media ('<=phone')
+    padding: 4px
+    width: 16px
+    height: 16px
