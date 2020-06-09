@@ -1,10 +1,14 @@
 import React from 'react'
-import './styles/App.sass'
+
+import { Header } from 'components'
+import 'styles/App.sass'
 
 function App() {
   return (
     <div className='App'>
-      <h2>Hello world</h2>
+      <div className='container'>
+        <Header />
+      </div>
     </div>
   )
 }
