@@ -1,0 +1,113 @@
+@import '../varibles'
+@import '../breakpoints'
+
+.cases
+  height: 50vh //fallback option
+  height: calc(var(--vh, 1vh) * 50)
+
+.cases__navigation
+  position: absolute
+  bottom: 0
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 32px
+
+  +media('<=tablet')
+    display: none
+
+.cases__arrow
+  height: 72px
+  width: 72px
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: rgba($black, .4)
+  border-radius: 50%
+  z-index: 2
+
+  &.disabled
+    opacity: .3
+
+.cases__arrow-icon
+  color: $white
+  height: 28px
+  width: 28px
+
+.cases__inner
+  +media('<=tablet')
+    flex-direction: column
+
+.case
+  position: relative
+  background-color: $black
+  cursor: pointer
+
+  &:hover
+    .case__image
+      opacity: 0.4
+
+.case__details
+  position: relative
+  width: calc( 100vw / 3 )
+  height: 50vh
+  height: calc(var(--vh, 1vh) * 50)
+  // min-height: $min-section-height
+  padding: 32px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  z-index: 1
+  overflow: hidden
+
+  +media('<=tablet')
+    width: 100vw
+
+  +media('<=phone')
+    padding: 16px
+
+.case__subtitle
+  margin-top: 156px
+  font-size: 1.6rem
+  font-weight: 600
+  color: $white
+  opacity: .8
+
+  +media('<=desktop', '>tablet')
+    font-size: 1.4rem
+
+  +media('<=phone')
+    font-size: 1.2rem
+    line-height: 2.2rem
+
+.case__title
+  width: 85%
+  margin-top: 16px
+  font-size: 2.4rem
+  line-height: 3.4rem
+  color: $white
+
+  +media('<=desktop', '>tablet')
+    font-size: 2rem
+    line-height: 2.4rem
+
+  +media('<=phone')
+    margin-top: 8px
+    font-size: 1.7rem
+    line-height: 2.2rem
+
+.case__image
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  overflow: hidden
+  opacity: .65
+  transition: .4s cubic-bezier(.6, -.05, .1, .99)
+
+  img
+    height: 100%
+    width: 100%
+    object-fit: cover
