@@ -17,8 +17,9 @@
   position: absolute
   top: 0
   height: 50vh //fallback option
-  height: calc(var(--vh, 1vh) * 50)
+  height: calc(var(--vh, 1vh) * 50.1) // 50.1 because https://prnt.sc/syg8hi
   width: 100%
+  transition: .3s all ease
   z-index: 8
 
 .overlay__top-item
@@ -49,6 +50,7 @@
   width: 100%
   height: 50vh //fallback option
   height: calc(var(--vh, 1vh) * 50)
+  transition: .3s all ease
   z-index: 8
 
 .overlay__bottom-item
