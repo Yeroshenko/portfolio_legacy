@@ -8,7 +8,6 @@ export const Navigation = () => (
     <div className='container'>
       <div className='navigation__columns'>
         <div className='navigation__column'>
-          {/* <div className='navigation__label'>Menu</div> */}
           <ul className='navigation__links'>
             <li>
               <NavLink to='/about' className='navigation__link'>
@@ -28,7 +27,6 @@ export const Navigation = () => (
           </ul>
         </div>
         <div className='navigation__column'>
-          {/* <div className='navigation__label'>Contact</div> */}
           <div className='navigation__infos'>
             <ul className='navigation__info'>
               <li className='navigation__info-label'>Email</li>

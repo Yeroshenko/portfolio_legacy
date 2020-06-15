@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { withRouter, NavLink } from 'react-router-dom'
 
 import { openMenuAnimation, closeMenuAnimation } from 'animations'
@@ -6,16 +6,22 @@ import { ReactComponent as UpArrow } from 'assets/up-arrow-circle.svg'
 import 'styles/components/Header.sass'
 
 export const Header = withRouter(({ history, dimesions }) => {
-  const [menuOpened, setMenuOpened] = useState(false)
+  const [animated, setAnimated] = useState(false)
 
-  const openMenu = () => setMenuOpened(true)
-  const closeMenu = () => setMenuOpened(false)
+  const openMenu = () => {
+    !animated &&
+      openMenuAnimation(dimesions.width, startAnimation, completeAnimation)
+  }
+  const closeMenu = useCallback(() => {
+    !animated && closeMenuAnimation(startAnimation, completeAnimation)
+  }, [animated])
+
+  const startAnimation = () => setAnimated(true)
+  const completeAnimation = () => setAnimated(false)
 
   useEffect(() => {
     history.listen(() => closeMenu())
-
-    menuOpened ? openMenuAnimation(dimesions.width) : closeMenuAnimation()
-  }, [menuOpened, dimesions, history])
+  }, [history, closeMenu])
 
   return (
     <div className='header'>
