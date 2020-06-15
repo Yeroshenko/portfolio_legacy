@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { homeAnimation } from 'animations'
 import { IntroOverlay, Banner, Cases } from 'components'

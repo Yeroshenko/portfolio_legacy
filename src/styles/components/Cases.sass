@@ -1,10 +1,14 @@
 @import '../varibles'
 @import '../breakpoints'
+@import '~swiper/css/swiper.css'
 
 .cases
   height: 50vh //fallback option
   height: calc(var(--vh, 1vh) * 50)
   transition: .3s all ease
+
+  .swiper-container
+    background-color: $white
 
 .cases__navigation
   position: absolute
@@ -15,8 +19,12 @@
   align-items: center
   padding: 32px
 
-  +media('<=tablet')
-    display: none
+  +media('<=phone')
+    padding: 16px
+
+  &--hiden
+    +media('>=tablet')
+      display: none
 
 .cases__arrow
   height: 72px
@@ -26,22 +34,26 @@
   justify-content: center
   background-color: rgba($black, .4)
   border-radius: 50%
+  transition: .3s all ease
+  opacity: .5
+  cursor: pointer
   z-index: 2
 
-  &.disabled
-    opacity: .3
+  +media('<=phone')
+    height: 60px
+    width: 60px
+
+  &:hover
+    opacity: 1
 
 .cases__arrow-icon
   color: $white
   height: 28px
   width: 28px
 
-.cases__inner
-  +media('<=tablet')
-    flex-direction: column
-
 .case
   position: relative
+  text-decoration: none
   background-color: $black
   cursor: pointer
 
@@ -51,10 +63,8 @@
 
 .case__details
   position: relative
-  width: calc( 100vw / 3 )
   height: 50vh
   height: calc(var(--vh, 1vh) * 50)
-  // min-height: $min-section-height
   padding: 32px
   display: flex
   flex-direction: column
@@ -62,9 +72,6 @@
   transition: .3s all ease
   z-index: 1
   overflow: hidden
-
-  +media('<=tablet')
-    width: 100vw
 
   +media('<=phone')
     padding: 16px
