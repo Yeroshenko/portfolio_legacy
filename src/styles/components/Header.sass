@@ -24,11 +24,21 @@
     font-weight: 700
     mix-blend-mode: difference
 
-.nav
-  width: 25px
+.nav-toggle
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  +media('<tablet')
+    margin-right: 24px
 
-  @include media('<=phone')
-    width: 20px
+  +media('<phone')
+    margin-right: 16px
+
+
+.hamberger-menu
+  width: 25px
 
   span
     display: block
@@ -36,3 +46,14 @@
     width: 100%
     margin-bottom: .3rem
     background-color: $black
+
+.hamberger-menu_close
+  position: absolute
+  display: none
+
+  svg
+    +media('<tablet')
+      width: 56px
+
+    +media('<phone')
+      width: 48px

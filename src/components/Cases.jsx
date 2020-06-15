@@ -25,32 +25,30 @@ const allCases = [
   }
 ]
 
-export const Cases = () => {
-  return (
-    <section className='cases'>
-      <div className='container-fluid'>
-        <div className='cases__navigation'>
-          <div className='cases__arrow prew disabled'>
-            <PrewArrow className='cases__arrow-icon' />
-          </div>
-          <div className='cases__arrow next'>
-            <NextArrow className='cases__arrow-icon' />
-          </div>
+export const Cases = () => (
+  <section className='cases'>
+    <div className='container-fluid'>
+      <div className='cases__navigation'>
+        <div className='cases__arrow prew disabled'>
+          <PrewArrow className='cases__arrow-icon' />
         </div>
-        <div className='row cases__inner'>
-          {allCases.map(({ id, subtitle, title, img }) => (
-            <div className='case' key={id}>
-              <div className='case__details'>
-                <h3 className='case__subtitle'>{subtitle}</h3>
-                <h2 className='case__title'>{title}</h2>
-              </div>
-              <div className='case__image'>
-                <img src={require(`../assets/${img}`)} alt={title} />
-              </div>
-            </div>
-          ))}
+        <div className='cases__arrow next'>
+          <NextArrow className='cases__arrow-icon' />
         </div>
       </div>
-    </section>
-  )
-}
+      <div className='row cases__inner'>
+        {allCases.map(({ id, subtitle, title, img }) => (
+          <div className='case' key={id}>
+            <div className='case__details'>
+              <h3 className='case__subtitle'>{subtitle}</h3>
+              <h2 className='case__title'>{title}</h2>
+            </div>
+            <div className='case__image'>
+              <img src={require(`../assets/${img}`)} alt={title} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)

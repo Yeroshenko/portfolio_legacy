@@ -8,10 +8,10 @@ import 'styles/App.sass'
 
 const routes = useRoutes()
 
-const App = () => {
+export const App = () => {
   const [dimesions, setDimesions] = useState({
     height: window.innerHeight,
-    wigth: window.innerWidth
+    width: window.innerWidth
   })
 
   // flash prevention
@@ -23,20 +23,19 @@ const App = () => {
     const debounceHandleResize = debounce(() => {
       setDimesions({
         height: window.innerHeight,
-        wigth: window.innerWidth
+        width: window.innerWidth
       })
     })
 
     window.addEventListener('resize', debounceHandleResize)
     return () => window.removeEventListener('resize', debounceHandleResize)
   }, [dimesions.height])
+
   return (
-    <div className='App'>
-      <Header />
+    <div className='app'>
+      <Header dimesions={dimesions} />
       <div className='content'>{routes}</div>
       <Navigation />
     </div>
   )
 }
-
-export default App
