@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { ReactComponent as RightArrow } from 'assets/arrow-right.svg'
+import { ReactComponent as RightArrow } from 'assets/icons/arrow-right.svg'
 import 'styles/components/Banner.sass'
 
 export const Banner = () => (
@@ -10,15 +10,15 @@ export const Banner = () => (
       <div className='row banner__row'>
         <h2 className='banner__title'>
           <div className='banner__line'>
-            <span>Создание топовых сайтов</span>
+            <span>Валерий Ерошенко</span>
           </div>
           <div className='banner__line'>
-            <span>от топ кодера.</span>
+            <span>Front-end розработчик</span>
           </div>
         </h2>
         <div className='banner__btn'>
-          <NavLink to='/about' className='banner__btn-link'>
-            Узнать больше <RightArrow className='banner__btn-icon' />
+          <NavLink to='#' className='banner__btn-link'>
+            Скачать резюме <RightArrow className='banner__btn-icon' />
           </NavLink>
         </div>
       </div>

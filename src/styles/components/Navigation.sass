@@ -38,19 +38,26 @@
   padding: 0 32px
 
   +media ('<=654px')
+    transform: translateY(110px)
     flex-direction: column
 
   +media ('<=phone')
     padding: 0 16px
 
 .navigation__column
-  width: 54%
+  width: 40%
+
+  +media ('<=1100px')
+    width: 35%
 
   +media ('<=654px')
     width: 100%
 
   &:last-child
-    width: 55%
+    width: 60%
+
+    +media ('<=1100px')
+      width: 65%
 
     +media ('<=654px')
       width: 100%
@@ -59,6 +66,9 @@
   li
     list-style: none
     margin-bottom: 2.8rem
+    +media ('<=654px')
+      margin-bottom: 1.8rem
+
     +media ('<=phone')
       margin-bottom: 1.6rem
   a
@@ -66,6 +76,9 @@
     font-size: 2.8rem
     text-decoration: none
     color: $black
+    +media ('<=654px')
+      font-size: 2.4rem
+
     +media ('<=phone')
       font-size: 2rem
 
@@ -74,23 +87,31 @@
   flex-wrap: wrap
   +media ('<=654px')
     justify-content: space-between
+    flex-direction: column
 
 .navigation__info
   padding: 0
   width: 50%
-  &:nth-child(2),
-  &:nth-child(3)
-    // +media ('<=654px') // ??
-    //   display: none
+
+  +media ('<=654px')
+    width: 100%
+
+  &:nth-child(1),
+  &:nth-child(2)
+    +media ('<=654px')
+      display: none
 
   li
     margin-bottom: 1.2rem
-    font-size: 1.4rem
+    font-size: 1.3rem
     font-weight: 300
     list-style: none
 
-    +media ('<=tablet')
+    +media ('<=desktop')
       font-size: 1.2rem
+
+    +media ('<=820px')
+      font-size: 1.1rem
       margin-bottom: 1rem
 
     +media ('<=tablet')
@@ -103,5 +124,4 @@
 
   .navigation__info-label
     font-weight: 600
-
 

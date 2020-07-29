@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import { withRouter, NavLink } from 'react-router-dom'
 
 import { openMenuAnimation, closeMenuAnimation } from 'animations'
-import { ReactComponent as UpArrow } from 'assets/up-arrow-circle.svg'
+import { ReactComponent as UpArrow } from 'assets/icons/up-arrow-circle.svg'
 import 'styles/components/Header.sass'
 
 export const Header = withRouter(({ history, dimesions }) => {
@@ -21,7 +21,7 @@ export const Header = withRouter(({ history, dimesions }) => {
 
   useEffect(() => {
     history.listen(() => closeMenu())
-  }, [history, closeMenu])
+  }, [history]) // not add closeMenu to dependency
 
   return (
     <div className='header'>

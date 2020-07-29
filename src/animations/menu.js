@@ -10,7 +10,7 @@ export const openMenuAnimation = (width, onStart, onComplete) => {
   })
     .to('.content', {
       duration: 1,
-      y: width <= 654 ? '70vh' : window.innerHeight / 2,
+      y: width <= 654 ? '60vh' : '50vh',
       ease: 'expo.inOut'
     })
     .to('.hamberger-menu span', {

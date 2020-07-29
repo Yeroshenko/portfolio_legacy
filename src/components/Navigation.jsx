@@ -11,7 +11,7 @@ export const Navigation = () => (
           <ul className='navigation__links'>
             <li>
               <NavLink to='/about' className='navigation__link'>
-                About me
+                Обо мне
               </NavLink>
             </li>
             <li>
@@ -21,7 +21,7 @@ export const Navigation = () => (
                 rel='noopener noreferrer'
                 className='navigation__link'
               >
-                Personal blog
+                Мой блог
               </a>
             </li>
           </ul>
@@ -29,19 +29,26 @@ export const Navigation = () => (
         <div className='navigation__column'>
           <div className='navigation__infos'>
             <ul className='navigation__info'>
-              <li className='navigation__info-label'>Email</li>
-              <li>Send to Email</li>
+            <li className='navigation__info-label'>Сейчас проживаю</li>
+              <li>г. Хмельницкий, Украина</li>
             </ul>
             <ul className='navigation__info'>
-              <li className='navigation__info-label'>Headquarteres</li>
-              <li>Kyiv, Ukraine</li>
+            <li className='navigation__info-label'>Ел. почта</li>
+              <li>
+                <a href='mailto:valeriy.yeroshenko@gmail.com'>
+                  valeriy.yeroshenko@gmail.com
+                </a>
+              </li>
+
             </ul>
             <ul className='navigation__info'>
-              <li className='navigation__info-label'>Phone</li>
-              <li>+380 98 319 3684</li>
+              <li className='navigation__info-label'>Номер телефона</li>
+              <li>
+                <a href='tel:+380983193684'>+380 98 319 3684</a>
+              </li>
             </ul>
             <ul className='navigation__info'>
-              <li className='navigation__info-label'>Social links</li>
+              <li className='navigation__info-label'>Социальные сети</li>
               <li>Socail icons</li>
             </ul>
           </div>
