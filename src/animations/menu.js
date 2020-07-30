@@ -8,39 +8,39 @@ export const openMenuAnimation = (width, onStart, onComplete) => {
     css: { overflow: 'hidden' },
     onStart: onStart
   })
-    .to('.content', {
+    .to(`[data-animation='content']`, {
       duration: 1,
       y: width <= 654 ? '60vh' : '50vh',
       ease: 'expo.inOut'
     })
-    .to('.hamberger-menu span', {
+    .to(`[data-animation='gamburger-line']`, {
       duration: 0.6,
       delay: -1,
       scaleX: 0,
       transformOrigin: '50% 0%',
       ease: 'expo.inOut'
     })
-    .to('#Path_1', {
+    .to(`[data-animation='menu-arrow-path-1']`, {
       duration: 0.4,
       delay: -0.6,
       css: { strokeDashoffset: 10, strokeDasharray: 5 }
     })
-    .to('#Path_2', {
+    .to(`[data-animation='menu-arrow-path-2']`, {
       duration: 0.4,
       delay: -0.6,
       css: { strokeDashoffset: 10, strokeDasharray: 20 }
     })
-    .to('#Line_1', {
+    .to(`[data-animation='menu-arrow-line-1']`, {
       duration: 0.4,
       delay: -0.6,
       css: { strokeDashoffset: 40, strokeDasharray: 18 }
     })
-    .to('#circle', {
+    .to(`[data-animation='menu-arrow-circle']`, {
       duration: 0.6,
       delay: -0.8,
       css: { strokeDashoffset: 0 }
     })
-    .to('.hamberger-menu_close', {
+    .to(`[data-animation='gamburger-close']`, {
       duration: 0.6,
       delay: -0.8,
       css: { display: 'block' },
@@ -49,40 +49,40 @@ export const openMenuAnimation = (width, onStart, onComplete) => {
 }
 
 export const closeMenuAnimation = (onStart, onComplete) => {
-  tl.to('.content', {
+  tl.to(`[data-animation='content']`, {
     duration: 1,
     y: 0,
     ease: 'expo.inOut',
     onStart: onStart
   })
-    .to('#circle', {
+    .to(`[data-animation='menu-arrow-circle']`, {
       duration: 0.6,
       delay: -0.6,
       css: { strokeDashoffset: -193, strokeDasharray: 227 }
     })
-    .to('#Path_1', {
+    .to(`[data-animation='menu-arrow-path-1']`, {
       duration: 0.4,
       delay: -0.6,
       css: { strokeDashoffset: 10, strokeDasharray: 10 }
     })
-    .to('#Path_2', {
+    .to(`[data-animation='menu-arrow-path-2']`, {
       duration: 0.4,
       delay: -0.6,
       css: { strokeDashoffset: 10, strokeDasharray: 10 }
     })
-    .to('#Line_1', {
+    .to(`[data-animation='menu-arrow-line-1']`, {
       duration: 0.4,
       delay: -0.6,
       css: { strokeDashoffset: 40, strokeDasharray: 40 }
     })
-    .to('.hamberger-menu span', {
+    .to(`[data-animation='gamburger-line']`, {
       duration: 0.6,
       delay: -0.6,
       scaleX: 1,
       transformOrigin: '50% 0%',
       ease: 'expo.inOut'
     })
-    .to('.hamberger-menu_close', { css: { display: 'none' } })
+    .to(`[data-animation='gamburger-close']`, { css: { display: 'none' } })
     .to('body', {
       css: { overflow: 'auto' },
       onComplete: onComplete

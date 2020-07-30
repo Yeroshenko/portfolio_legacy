@@ -34,7 +34,9 @@ export const App = () => {
   return (
     <div className='app'>
       <Header dimesions={dimesions} />
-      <div className='content'>{routes}</div>
+      <div className='content' data-animation='content'>
+        {routes}
+      </div>
       <Navigation />
     </div>
   )

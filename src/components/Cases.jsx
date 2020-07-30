@@ -60,7 +60,11 @@ export const Cases = () => {
                 <h2 className='case__title'>{title}</h2>
               </div>
               <div className='case__image'>
-                <img src={require(`../assets/cases/${img}`)} alt={title} />
+                <img
+                  src={require(`../assets/cases/${img}`)}
+                  alt={title}
+                  data-animation='case-image'
+                />
               </div>
             </a>
           ))}

@@ -10,10 +10,10 @@ export const Banner = () => (
       <div className='row banner__row'>
         <h2 className='banner__title'>
           <div className='banner__line'>
-            <span>Валерий Ерошенко</span>
+            <span data-animation='banner-line'>Валерий Ерошенко</span>
           </div>
           <div className='banner__line'>
-            <span>Front-end розработчик</span>
+            <span data-animation='banner-line'>Front-end розработчик</span>
           </div>
         </h2>
         <div className='banner__btn'>
