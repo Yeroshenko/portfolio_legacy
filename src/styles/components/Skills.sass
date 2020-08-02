@@ -9,6 +9,10 @@
     +media('<=tablet')
       font-size: 1.9rem
 
+    +media('<=phone')
+      font-size: 1.7rem
+      margin-bottom: 1rem
+
     +media('>1100px')
       display: none
 
@@ -22,6 +26,9 @@
       font-weight: 500
 
       +media('>1100px')
+        font-size: 1.5rem
+
+      +media('<=phone')
         font-size: 1.5rem
 
     &-content
@@ -46,3 +53,6 @@
           font-size: 1.5rem
           line-height: 2rem
 
+        +media('<=phone')
+          font-size: 1.3rem
+          line-height: 1.8rem
