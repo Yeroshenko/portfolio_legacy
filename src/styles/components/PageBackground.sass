@@ -1,4 +1,5 @@
 @import '../varibles'
+@import '../breakpoints'
 
 .page-background
   position: absolute
@@ -17,3 +18,6 @@
   text-shadow: 0 4px 85.56px rgba($black,.15)
   opacity: 0.05
   user-select: none
+
+  +media('<=600px')
+    display: none

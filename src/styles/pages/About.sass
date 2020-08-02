@@ -1,12 +1,30 @@
 @import '../varibles'
+@import '../breakpoints'
 
 .about-page
+  position: relative
   height: 100vh
+  min-height: 100vh
   background-color: $white
 
+  +media('<=1100px')
+    height: auto
+
   &__content
-    display: grid
-    grid-template-columns: 50%  50%
-    grid-gap: 60px
-    align-content: center
     z-index: 2
+
+    +media('<=1100px')
+      margin-top: 128px
+
+      & > *
+        margin-bottom: 60px
+
+    +media('>1100px')
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 60px
+      align-content: center
+
+    & > *
+      justify-self: center
+      align-self: center

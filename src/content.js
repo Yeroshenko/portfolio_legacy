@@ -25,17 +25,17 @@ export const allCases = [
   }
 ]
 
-export const aboutMe = `👋 Меня зовут Валерий, 19 лет.
+export const aboutMe = `👋 Меня зовут Валерий, мне 19 лет.
   С декабря 2018 года начал изучать веб разработку.
-  Обожаю все что связвно с миром розработки и спидкубингом.
-  Цель стать senior full stack розработчиком.`
+  Обожаю все что связанно с миром разработки и спидкубингом.
+  Цель стать senior full stack разработчиком.`
 
 export const skills = [
   {
     category: 'Frontend',
     technologies: [
       'JavaScript (ES6+), TypeScript',
-      'ReactJS, Redux, React native',
+      'ReactJS, Redux, React native, Gatsby',
       'CSS / SCSS / CSS Modules / BEM',
       'PugJS (Jade), HandleBars',
       'Twitter Bootstrap, Ant Design, Material UI',
@@ -46,7 +46,7 @@ export const skills = [
   {
     category: 'Backend',
     technologies: [
-      'Node.js / Express / MongoDB / Mongoose / JWT',
+      'Node.js / Express / MongoDB / Mongoose',
       'PHP / Wordpress / OpenCart'
     ]
   },
@@ -54,7 +54,7 @@ export const skills = [
     category: 'WorkFlow',
     technologies: [
       'Git / GitHub',
-      'Figma / Photoshop / Illustrator / Zeplin / Avacode'
+      'Figma / Photoshop / Illustrator / Avacode'
     ]
   }
 ]

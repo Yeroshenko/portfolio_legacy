@@ -47,9 +47,9 @@ export const Header = withRouter(({ history, dimesions }) => {
                     transform='translate(184 463.788)'
                     fill='none'
                     stroke='#000'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2.5'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2.5'
                   />
                   <path
                     data-animation='menu-arrow-path-1'
@@ -57,9 +57,9 @@ export const Header = withRouter(({ history, dimesions }) => {
                     transform='translate(173.051 458.302)'
                     fill='none'
                     stroke='#000'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2.5'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2.5'
                   />
                   <path
                     data-animation='menu-arrow-path-2'
@@ -67,16 +67,16 @@ export const Header = withRouter(({ history, dimesions }) => {
                     transform='translate(173.051 458.302)'
                     fill='none'
                     stroke='#000'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2.5'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2.5'
                   />
                   <g
                     id='Ellipse_1'
                     transform='translate(152 439)'
                     fill='none'
                     stroke='rgba(0,0,0,0.2)'
-                    stroke-width='2.5'
+                    strokeWidth='2.5'
                   >
                     <circle cx='32' cy='32' r='32' stroke='none' />
                     <circle

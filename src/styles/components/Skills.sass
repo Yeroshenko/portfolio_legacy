@@ -1,16 +1,48 @@
+@import '../varibles'
+@import '../breakpoints'
+
 .skills
+  &__title
+    font-size: 2.2rem
+    margin-bottom: 1.4rem
+
+    +media('<=tablet')
+      font-size: 1.9rem
+
+    +media('>1100px')
+      display: none
+
   &__list
     list-style: none
     margin-bottom: 1.3rem
 
     &-title
-      font-size: 1.5rem
+      font-size: 1.8rem
       margin-bottom: 0.2rem
       font-weight: 500
+
+      +media('>1100px')
+        font-size: 1.5rem
 
     &-content
       list-style: none
 
       li
+        position: relative
         font-size: 1.3rem
         line-height: 1.8rem
+        padding-left: 20px
+
+        &::before
+          content: '-'
+          position: absolute
+          left: 0
+
+        +media('<=1100px')
+          font-size: 1.7rem
+          line-height: 2.3rem
+
+        +media('<=tablet')
+          font-size: 1.5rem
+          line-height: 2rem
+
