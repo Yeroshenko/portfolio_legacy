@@ -1,0 +1,37 @@
+@import '../varibles'
+@import '../breakpoints'
+
+.nav-toggle
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+
+  +media('<tablet')
+  margin-right: 24px
+
+  +media('<phone')
+  margin-right: 16px
+
+
+.hamberger-menu
+  padding: 16px
+
+  span
+    display: block
+    height: 3px
+    width: 28px
+    margin-bottom: .3rem
+    background-color: $black
+
+.hamberger-menu_close
+  position: absolute
+  display: none
+
+  svg
+    +media('<tablet')
+    width: 56px
+
+    +media('<phone')
+    width: 48px
