@@ -2,7 +2,7 @@ import gsap from 'gsap'
 
 const tl = gsap.timeline()
 
-export const homeAnimation = completeAnomation => {
+export const homeAnimation = completeAnimation => {
   tl.from(`[data-animation='banner-line']`, 1.8, {
     y: 100,
     ease: 'power4.out',
@@ -27,6 +27,6 @@ export const homeAnimation = completeAnomation => {
       ease: 'expo.inOut',
       delay: -2,
       stagger: { amount: 0.4 },
-      onComplete: completeAnomation
+      onComplete: completeAnimation
     })
 }

@@ -1,19 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import cn from 'classnames'
 import Swiper from 'react-id-swiper'
 
+import { Context } from 'context'
 import { allCases } from 'content'
+import { getSectionStyleHeight } from 'utils'
 import { ReactComponent as PrewArrow } from 'assets/icons/arrow-left.svg'
 import { ReactComponent as NextArrow } from 'assets/icons/arrow-right.svg'
 import 'styles/components/Cases.sass'
 
 export const Cases = () => {
+  const { orientation, dimesions } = useContext(Context)
   const [swiper, updateSwiper] = useState(null)
 
+  const sectionHeightStyle = getSectionStyleHeight(orientation, dimesions)
+
   const goNext = () => {
-    if (swiper !== null) {
-      swiper.slideNext()
-    }
+    swiper !== null && swiper.slideNext()
   }
   const goPrev = () => {
     if (swiper !== null) {
@@ -26,20 +29,20 @@ export const Cases = () => {
     slidesPerView: 3,
     mousewheel: true,
     breakpoints: {
-      768: { slidesPerView: 3, loop: false },
+      769: { slidesPerView: 3, loop: false },
       320: { slidesPerView: 1, loop: true }
     }
   }
 
   return (
-    <section className='cases'>
+    <section className='cases' style={sectionHeightStyle}>
       <div className='container-fluid'>
         <div
           className={cn('cases__navigation', {
             'cases__navigation--hiden': allCases.length <= 3
           })}
         >
-          <div className='cases__arrow prew' onClick={goPrev}>
+          <div className='cases__arrow prev' onClick={goPrev}>
             <PrewArrow className='cases__arrow-icon' />
           </div>
           <div className='cases__arrow next' onClick={goNext}>
@@ -55,7 +58,7 @@ export const Cases = () => {
               href={link}
               key={index}
             >
-              <div className='case__details'>
+              <div className='case__details' style={sectionHeightStyle}>
                 <h3 className='case__stack'>{stack}</h3>
                 <h2 className='case__title'>{title}</h2>
               </div>

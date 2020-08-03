@@ -1,15 +1,22 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback, useContext } from 'react'
 import { withRouter, NavLink } from 'react-router-dom'
 
+import { Context } from 'context'
 import { openMenuAnimation, closeMenuAnimation } from 'animations'
 import 'styles/components/Header.sass'
 
-export const Header = withRouter(({ history, dimesions }) => {
+export const Header = withRouter(({ history }) => {
   const [animated, setAnimated] = useState(false)
+  const { orientation, dimesions } = useContext(Context)
 
   const openMenu = () => {
     !animated &&
-      openMenuAnimation(dimesions.width, startAnimation, completeAnimation)
+      openMenuAnimation(
+        dimesions.width,
+        orientation,
+        startAnimation,
+        completeAnimation
+      )
   }
   const closeMenu = useCallback(() => {
     !animated && closeMenuAnimation(startAnimation, completeAnimation)
@@ -20,6 +27,7 @@ export const Header = withRouter(({ history, dimesions }) => {
 
   useEffect(() => {
     history.listen(() => closeMenu())
+    // eslint-disable-next-line
   }, [history]) // not add closeMenu to dependency
 
   return (

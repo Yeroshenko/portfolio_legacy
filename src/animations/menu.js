@@ -2,7 +2,17 @@ import gsap from 'gsap'
 
 const tl = gsap.timeline()
 
-export const openMenuAnimation = (width, onStart, onComplete) => {
+export const openMenuAnimation = (width, orientation, onStart, onComplete) => {
+  const YOffset = window.pageYOffset
+
+  const contentTranslate = (orientation, width, YOffset = 0) => {
+    if (orientation === 'landscape') {
+      return 100 + YOffset + 'vh'
+    }
+
+    return width <= 654 ? '60vh' : '50vh'
+  }
+
   tl.to('body', {
     duration: 0.01,
     css: { overflow: 'hidden' },
@@ -10,7 +20,7 @@ export const openMenuAnimation = (width, onStart, onComplete) => {
   })
     .to(`[data-animation='content']`, {
       duration: 1,
-      y: width <= 654 ? '60vh' : '50vh',
+      y: contentTranslate(orientation, width, YOffset),
       ease: 'expo.inOut'
     })
     .to(`[data-animation='gamburger-line']`, {

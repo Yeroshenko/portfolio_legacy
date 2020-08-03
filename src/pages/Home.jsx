@@ -6,17 +6,17 @@ import { IntroOverlay, Banner, Cases } from 'components'
 export const Home = () => {
   const [animationComplete, setAnimationComplete] = useState(false)
 
-  const completeAnomation = () => setAnimationComplete(true)
+  const completeAnimation = () => setAnimationComplete(true)
 
   useEffect(() => {
-    homeAnimation(completeAnomation)
+    homeAnimation(completeAnimation)
   }, [])
 
   return (
-    <div>
+    <>
       {!animationComplete && <IntroOverlay />}
       <Banner />
       <Cases />
-    </div>
+    </>
   )
 }
