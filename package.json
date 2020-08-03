@@ -7,7 +7,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^12.1.0",
     "classnames": "^2.2.6",
-    "gsap": "^3.3.1",
+    "gsap": "^3.4.2",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
