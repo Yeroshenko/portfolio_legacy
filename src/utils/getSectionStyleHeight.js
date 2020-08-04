@@ -1,3 +1,3 @@
 export const getSectionStyleHeight = (orientation, dimesions) => ({
-  height: orientation === 'landscape' ? dimesions.height : dimesions.height / 2
+  height: orientation === 'landscape' ? '100vhc' : dimesions.height / 2
 })

@@ -29,8 +29,8 @@ export const Cases = () => {
     slidesPerView: 3,
     mousewheel: true,
     breakpoints: {
-      769: { slidesPerView: 3, loop: false },
-      320: { slidesPerView: 1, loop: true }
+      769: { slidesPerView: 3 },
+      320: { slidesPerView: 1 }
     }
   }
 
