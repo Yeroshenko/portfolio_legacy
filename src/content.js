@@ -1,9 +1,15 @@
 export const allCases = [
   {
-    stack: 'Subtitle 1',
-    title: 'I am case title 1',
-    img: 'img-1.png',
-    link: 'https://example.com'
+    stack: 'JavaScript Webpack Jest',
+    title: 'iSheets',
+    img: 'iSheets.min.jpg',
+    link: 'http://isheets.netlify.app/'
+  },
+  {
+    stack: 'React Redux Firebase',
+    title: 'iNeed',
+    img: 'todolistmania-min.jpg',
+    link: 'https://todolistmania.web.app/'
   },
   {
     stack: 'Subtitle 2',
@@ -17,12 +23,6 @@ export const allCases = [
     img: 'img-3.png',
     link: 'https://example.com'
   },
-  {
-    stack: 'React Redux Firebase',
-    title: 'Планировщик дел',
-    img: 'todolistmania-min.jpg',
-    link: 'https://todolistmania.web.app/'
-  }
 ]
 
 export const aboutMe = `👋 Меня зовут Валерий, мне 19 лет.
