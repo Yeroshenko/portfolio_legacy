@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
 
 import { Context } from 'context'
-import { updateVh, debounce } from 'utils'
+import { updateVh, debounce, getOrientation } from 'utils'
 import { useRoutes } from 'hooks'
 import { Header, Navigation } from 'components'
 import 'styles/App.sass'
@@ -10,22 +10,19 @@ import 'styles/App.sass'
 const routes = useRoutes()
 
 export const App = () => {
+  const [orientation, setOrientation] = useState('portrait')
+
   const [dimesions, setDimesions] = useState({
     height: window.innerHeight,
     width: window.innerWidth
   })
 
-  const [orientation, setOrientation] = useState('portrait')
-
-  const getOrientation = angle =>
-    angle === 0 || angle === 270 ? 'portrait' : 'landscape'
-
   // flash prevention
   gsap.to('body', 0, { css: { visibility: 'visible' } })
 
+  // dimesions
   useEffect(() => {
     updateVh(dimesions.height)
-
     const debounceHandleResize = debounce(() => {
       setDimesions({
         height: window.innerHeight,
@@ -37,9 +34,9 @@ export const App = () => {
     return () => window.removeEventListener('resize', debounceHandleResize)
   }, [dimesions.height])
 
+  // orientation
   useEffect(() => {
     setOrientation(getOrientation(window.screen.orientation.angle))
-
     const orientationChange = e => {
       setOrientation(getOrientation(e.target.screen.orientation.angle))
     }
