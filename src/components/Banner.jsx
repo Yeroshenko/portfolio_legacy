@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { NavLink } from 'react-router-dom'
 
 import { Context } from 'context'
+import { summaryLink } from 'content'
 import { getSectionStyleHeight } from 'utils'
 import { ReactComponent as RightArrow } from 'assets/icons/arrow-right.svg'
 import 'styles/components/Banner.sass'
@@ -23,9 +23,17 @@ export const Banner = () => {
             </div>
           </h2>
           <div className='banner__btn'>
-            <NavLink to='#' className='banner__btn-link'>
-              Скачать резюме <RightArrow className='banner__btn-icon' />
-            </NavLink>
+            <a
+              href={summaryLink || '/'}
+              className='banner__btn-link'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Скачать резюме
+              <span className='banner__btn-circle'>
+                <RightArrow className='banner__btn-icon' />
+              </span>
+            </a>
           </div>
         </div>
       </div>

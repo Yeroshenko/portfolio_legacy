@@ -30,6 +30,8 @@ export const aboutMe = `👋 Меня зовут Валерий, мне 19 ле�
   Обожаю все что связанно с миром разработки и спидкубингом.
   Цель стать senior full stack разработчиком.`
 
+export const summaryLink = 'https://valeriy-yeroshenko.web.app'
+
 export const skills = [
   {
     category: 'Frontend',

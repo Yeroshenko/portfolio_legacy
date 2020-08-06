@@ -20,11 +20,11 @@
   color: $white
   mix-blend-mode: difference
 
-  @include media ('<=tablet')
+  +media ('<=tablet')
     font-size: 2.4rem
     line-height: 3rem
 
-  @include media ('<=phone')
+  +media ('<=phone')
     margin-top: 72px
     font-size: 1.7rem
     line-height: 2.2rem
@@ -34,10 +34,10 @@
   position: relative
   overflow: hidden
 
-  @include media ('<=tablet')
+  +media ('<=tablet')
     height: 48px
 
-  @include media ('<=phone')
+  +media ('<=phone')
     height: 35.2px
 
   span
@@ -56,32 +56,44 @@
   color: $black
   text-decoration: none
 
-  @include media ('<=tablet')
+  +media ('<=tablet')
     font-size: 1.3rem
 
-  @include media ('<=phone')
+  +media ('<=phone')
     font-size: 1.1rem
 
   &:hover
-    .banner__btn-icon
+    .banner__btn-circle
       background-color: $black
+    .banner__btn-icon
       color: $white
 
-.banner__btn-icon
-  margin-left: 16px
-  padding: 12px
+
+.banner__btn-circle
   height: 52px
   width: 52px
+  padding: 12px
+  margin-left: 16px
+  display: flex
+  align-items: center
+  justify-content: center
+
   border: 2px solid $black
   border-radius: 50%
-  transition: .4s ease-in-out all
+  transition: .3s ease-in-out all
 
-  @include media ('<=tablet')
+  +media ('<=tablet')
     padding: 6px
-    width: 20px
-    height: 20px
+    width: 36px
+    height: 36px
 
-  @include media ('<=phone')
+  +media ('<=phone')
     padding: 4px
-    width: 16px
-    height: 16px
+    width: 28px
+    height: 28px
+
+.banner__btn-icon
+  width: 100%
+  height: 100%
+
+  transition: .3s ease-in-out all
