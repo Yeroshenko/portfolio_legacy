@@ -2,27 +2,21 @@ export const allCases = [
   {
     stack: 'JavaScript Webpack Jest',
     title: 'iSheets',
-    img: 'iSheets.min.jpg',
+    img: 'iSheets.jpg',
     link: 'http://isheets.netlify.app/'
   },
   {
     stack: 'React Redux Firebase',
     title: 'iNeed',
-    img: 'todolistmania-min.jpg',
+    img: 'todolistmania.jpg',
     link: 'https://todolistmania.web.app/'
   },
   {
-    stack: 'Subtitle 2',
-    title: 'I am case title 2',
-    img: 'img-2.png',
-    link: 'https://example.com'
-  },
-  {
-    stack: 'Subtitle 3',
-    title: 'I am case title 3',
-    img: 'img-3.png',
-    link: 'https://example.com'
-  },
+    stack: 'Gatsby Netlify cms',
+    title: 'Frontender notes',
+    img: 'frontendernotes.jpg',
+    link: 'http://frontendernotes.netlify.app'
+  }
 ]
 
 export const aboutMe = `👋 Меня зовут Валерий, мне 19 лет.
