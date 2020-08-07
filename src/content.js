@@ -9,7 +9,7 @@ export const allCases = [
     stack: 'React Redux Firebase',
     title: 'iNeed',
     img: 'todolistmania.jpg',
-    link: 'https://todolistmania.web.app/'
+    link: 'http://todolistmania.web.app/'
   },
   {
     stack: 'Gatsby Netlify cms',
@@ -24,7 +24,7 @@ export const aboutMe = `👋 Меня зовут Валерий, мне 19 ле�
   Обожаю все что связанно с миром разработки и спидкубингом.
   Цель стать senior full stack разработчиком.`
 
-export const summaryLink = 'https://valeriy-yeroshenko.web.app'
+export const summaryLink = 'https://www.work.ua/ru/resumes/5721943/'
 
 export const skills = [
   {

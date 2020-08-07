@@ -29,7 +29,7 @@ export const Banner = () => {
               target='_blank'
               rel='noopener noreferrer'
             >
-              Скачать резюме
+              Смотреть резюме
               <span className='banner__btn-circle'>
                 <RightArrow className='banner__btn-icon' />
               </span>
