@@ -6,7 +6,7 @@ export const openMenuAnimation = (width, orientation, onStart, onComplete) => {
   const YOffset = window.pageYOffset
 
   const contentTranslate = (orientation, width, YOffset = 0) => {
-    if ((orientation === 'landscape' && width <= 768)) {
+    if ((orientation === 'landscape' && width <= 815)) {
       return 100 + YOffset + 'vh'
     }
 

@@ -26,7 +26,7 @@ export const Cases = () => {
 
   const swiperParams = {
     direction: 'horizontal',
-    slidesPerView: 3,
+    slidesPerView: 1,
     mousewheel: true,
     breakpoints: {
       769: { slidesPerView: 3 },
