@@ -33,8 +33,8 @@ export const skills = [
       'JavaScript (ES6+), TypeScript',
       'ReactJS, Redux, React native, Gatsby',
       'CSS / SCSS / CSS Modules / BEM',
-      'PugJS (Jade), HandleBars',
-      'Twitter Bootstrap, Ant Design, Material UI',
+      'PugJS (Jade) / HandleBars',
+      'Twitter Bootstrap / Ant Design / Material UI',
       'Webpack / Gulp',
       'Firebase'
     ]
@@ -42,7 +42,7 @@ export const skills = [
   {
     category: 'Backend',
     technologies: [
-      'Node.js / Express / MongoDB / Mongoose',
+      'Node.js, Express, MongoDB, JWT',
       'PHP / Wordpress / OpenCart'
     ]
   },
