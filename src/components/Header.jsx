@@ -8,12 +8,12 @@ import { NavToggle } from './NavToggle'
 
 export const Header = withRouter(({ history }) => {
   const [animated, setAnimated] = useState(false)
-  const { orientation, dimesions } = useContext(Context)
+  const { orientation, dimensions } = useContext(Context)
 
   const openMenu = () => {
     !animated &&
       openMenuAnimation(
-        dimesions.width,
+        dimensions.width,
         orientation,
         startAnimation,
         completeAnimation

@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
 
 import { Context } from 'context'
-import { summaryLink } from 'content'
 import { getSectionStyleHeight } from 'utils'
 import { ReactComponent as RightArrow } from 'assets/icons/arrow-right.svg'
+import cvLink from 'assets/cv.pdf'
 import 'styles/components/Banner.sass'
 
 export const Banner = () => {
-  const { orientation, dimesions } = useContext(Context)
-  const bannerStyles = getSectionStyleHeight(orientation, dimesions)
+  const { orientation, dimensions } = useContext(Context)
+  const bannerStyles = getSectionStyleHeight(orientation, dimensions)
 
   return (
     <section className='banner' style={bannerStyles}>
@@ -24,7 +24,7 @@ export const Banner = () => {
           </h2>
           <div className='banner__btn'>
             <a
-              href={summaryLink || '/'}
+              href={cvLink}
               className='banner__btn-link'
               target='_blank'
               rel='noopener noreferrer'

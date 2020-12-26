@@ -5,8 +5,8 @@ import { getSectionStyleHeight } from 'utils'
 import 'styles/components/IntroOverlay.sass'
 
 export const IntroOverlay = () => {
-  const { orientation, dimesions } = useContext(Context)
-  const heightStyles = getSectionStyleHeight(orientation, dimesions)
+  const { orientation, dimensions } = useContext(Context)
+  const heightStyles = getSectionStyleHeight(orientation, dimensions)
 
   return (
     <div className='intro-overlay' data-animation='overlay'>

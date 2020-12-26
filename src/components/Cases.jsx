@@ -10,10 +10,10 @@ import { ReactComponent as NextArrow } from 'assets/icons/arrow-right.svg'
 import 'styles/components/Cases.sass'
 
 export const Cases = () => {
-  const { orientation, dimesions } = useContext(Context)
+  const { orientation, dimensions } = useContext(Context)
   const [swiper, updateSwiper] = useState(null)
 
-  const sectionHeightStyle = getSectionStyleHeight(orientation, dimesions)
+  const sectionHeightStyle = getSectionStyleHeight(orientation, dimensions)
 
   const goNext = () => {
     swiper !== null && swiper.slideNext()

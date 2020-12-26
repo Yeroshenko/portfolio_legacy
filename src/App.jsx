@@ -12,7 +12,7 @@ const routes = useRoutes()
 export const App = () => {
   const [orientation, setOrientation] = useState('portrait')
 
-  const [dimesions, setDimesions] = useState({
+  const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth
   })
@@ -20,11 +20,11 @@ export const App = () => {
   // flash prevention
   gsap.to('body', 0, { css: { visibility: 'visible' } })
 
-  // dimesions
+  // dimensions
   useEffect(() => {
-    updateVh(dimesions.height)
+    updateVh(dimensions.height)
     const debounceHandleResize = debounce(() => {
-      setDimesions({
+      setDimensions({
         height: window.innerHeight,
         width: window.innerWidth
       })
@@ -32,7 +32,7 @@ export const App = () => {
 
     window.addEventListener('resize', debounceHandleResize)
     return () => window.removeEventListener('resize', debounceHandleResize)
-  }, [dimesions.height])
+  }, [dimensions.height])
 
   // orientation
   useEffect(() => {
@@ -48,7 +48,7 @@ export const App = () => {
 
   return (
     <div className='app'>
-      <Context.Provider value={{ orientation, dimesions }}>
+      <Context.Provider value={{ orientation, dimensions }}>
         <Header />
         <div className='content' data-animation='content'>
           {routes}
