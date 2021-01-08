@@ -36,40 +36,42 @@
   display: flex
   padding: 0 32px
 
-  +media ('<=654px')
+  +media('<=654px')
     transform: translateY(110px)
     flex-direction: column
 
-  +media ('<=phone')
+  +media('<=phone')
     padding: 0 16px
 
 .navigation__column
   width: 40%
 
-  +media ('<=1100px')
+  +media('<=1100px')
     width: 35%
 
-  +media ('<=654px')
+  +media('<=654px')
     width: 100%
 
   &:last-child
     width: 60%
 
-    +media ('<=1100px')
+    +media('<=1100px')
       width: 65%
 
-    +media ('<=654px')
+    +media('<=654px')
       width: 100%
 
 .navigation__links
   li
     list-style: none
     margin-bottom: 2.8rem
-    +media ('<=654px')
+
+    +media('<=tablet')
       margin-bottom: 1.8rem
 
-    +media ('<=phone')
+    +media('<=phone')
       margin-bottom: 1.6rem
+
   a
     font-weight: 600
     font-size: 2.8rem
@@ -77,18 +79,18 @@
     color: $black
 
     +media('<=tablet')
-    font-size: 2.5rem
+      font-size: 2.5rem
 
-    +media ('<=654px')
+    +media('<=654px')
       font-size: 2.4rem
 
-    +media ('<=phone')
+    +media('<=phone')
       font-size: 2rem
 
 .navigation__infos
   display: flex
   flex-wrap: wrap
-  +media ('<=654px')
+  +media('<=654px')
     justify-content: space-between
     flex-direction: column
 
@@ -96,12 +98,12 @@
   padding: 0
   width: 50%
 
-  +media ('<=654px')
+  +media('<=654px')
     width: 100%
 
   &:nth-child(1),
   &:nth-child(2)
-    +media ('<=654px')
+    +media('<=654px')
       display: none
 
   li
@@ -110,14 +112,14 @@
     font-weight: 300
     list-style: none
 
-    +media ('<=desktop')
+    +media('<=desktop')
       font-size: 1.2rem
 
-    +media ('<=820px')
+    +media('<=820px')
       font-size: 1.1rem
       margin-bottom: 1rem
 
-    +media ('<=tablet')
+    +media('<=tablet')
       font-size: 0.9rem
       margin-bottom: .875rem
 

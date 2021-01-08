@@ -26,22 +26,28 @@
   position: absolute
   bottom: 0
   height: 100%
-  width: calc( 100vw / 3 )
+  width: calc(100vw / 3)
   background-color: $black
+
+  +media('<=LGtablet')
+    width: calc(100vw / 2)
 
   +media('<=tablet')
     width: 100vw
 
   &:nth-child(2)
-    left: calc( 100% / 3 )
+    left: calc(100% / 3)
+
+    +media('<=LGtablet')
+      left: calc(100vw / 2)
 
     +media('<=tablet')
       display: none
 
   &:nth-child(3)
-    left: calc( 100% / 3 * 2 )
+    left: calc(100% / 3 * 2)
 
-    +media('<=tablet')
+    +media('<=LGtablet')
       display: none
 
 .overlay__bottom
@@ -56,17 +62,24 @@
 .overlay__bottom-item
   position: absolute
   bottom: 0
-  right: calc( 100% / 3 * 2 )
+  right: calc(100% / 3 * 2)
   height: 100%
-  width: calc( 100vw / 3 )
+  width: calc(100vw / 3)
   background-color: $black
+
+  +media('<=LGtablet')
+    width: calc(100vw / 2)
+    right: calc(100% / 2)
 
   +media('<=tablet')
     right: 0
     width: 100vw
 
   &:nth-child(2)
-    right: calc( 100% / 3 )
+    right: calc(100% / 3)
+
+    +media('<=LGtablet')
+      right: 0
 
     +media('<=tablet')
       display: none
@@ -74,5 +87,5 @@
   &:nth-child(3)
     right: 0
 
-    +media('<=tablet')
+    +media('<=LGtablet')
       display: none

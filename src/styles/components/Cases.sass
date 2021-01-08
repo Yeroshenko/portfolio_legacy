@@ -62,6 +62,16 @@
     .case__image
       opacity: 0.4
 
+    +media('>=LGtablet')
+      .case__title
+        transform: translateY(0)
+        opacity: 1
+
+      .case__stack
+        transform: translateY(0)
+        opacity: .8
+
+
 .case__details
   position: relative
   height: 50vh
@@ -70,7 +80,7 @@
   display: flex
   flex-direction: column
   justify-content: center
-  transition: .3s all ease
+  transition: .3s all ease-in-out
   z-index: 1
   overflow: hidden
 
@@ -82,10 +92,14 @@
   font-size: 1.6rem
   font-weight: 600
   color: $white
-  opacity: .8
+  transition: .3s all ease-in-out
+
+  +media('>=LGtablet')
+    transform: translateY(2rem)
+    opacity: 0
 
   +media('<=desktop', '>tablet')
-    font-size: 1.4rem
+    font-size: 2rem
 
   +media('<=phone')
     font-size: 1.2rem
@@ -97,10 +111,16 @@
   font-size: 2.4rem
   line-height: 3.4rem
   color: $white
+  transition: .3s all ease-in-out
+
+  +media('>=LGtablet')
+    transform: translateY(3rem)
+    opacity: 0
 
   +media('<=desktop', '>tablet')
-    font-size: 2rem
-    line-height: 2.4rem
+    font-size: 3rem
+    line-height: 3.4rem
+
 
   +media('<=phone')
     margin-top: 8px

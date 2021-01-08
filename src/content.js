@@ -1,5 +1,11 @@
 export const allCases = [
   {
+    stack: 'TypeScript NextJs Styled Components',
+    title: 'Memory game',
+    img: 'memory-game.jpg',
+    link: 'https://imemory.vercel.app/'
+  },
+  {
     stack: 'JavaScript Webpack Jest',
     title: 'iSheets',
     img: 'iSheets.jpg',
