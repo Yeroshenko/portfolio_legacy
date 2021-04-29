@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
+import orientationPolyfill from 'o9n'
 
 import { Context } from 'context'
 import { updateVh, debounce, getOrientation } from 'utils'
@@ -36,7 +37,7 @@ export const App = () => {
 
   // orientation
   useEffect(() => {
-    setOrientation(getOrientation(window.screen.orientation.angle))
+    setOrientation(getOrientation(orientationPolyfill.getOrientation().angle))
     const orientationChange = e => {
       setOrientation(getOrientation(e.target.screen.orientation.angle))
     }

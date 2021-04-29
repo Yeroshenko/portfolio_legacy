@@ -52,7 +52,7 @@ export const Navigation = () => (
             <ul className='navigation__info'>
               <li className='navigation__info-label'>Номер телефона</li>
               <li>
-                <a href='tel:+380983193684' className='navigation__link'>
+                <a href='tel:+380936490370' className='navigation__link'>
                   +380 93 649 0370
                 </a>
               </li>
