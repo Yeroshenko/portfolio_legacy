@@ -3,8 +3,9 @@ import React, { useContext } from 'react'
 import { Context } from 'context'
 import { getSectionStyleHeight } from 'utils'
 import { ReactComponent as RightArrow } from 'assets/icons/arrow-right.svg'
-import cvLink from 'assets/cv.pdf'
 import 'styles/components/Banner.sass'
+
+const cvLink = 'https://drive.google.com/file/d/1LzInPw5a8Z1CaUvvGPZ7BicOta0g-God/view' 
 
 export const Banner = () => {
   const { orientation, dimensions } = useContext(Context)
